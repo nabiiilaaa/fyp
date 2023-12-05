@@ -1,31 +1,21 @@
-function loadSection(sectionName) 
-{
-    const contentSection = document.getElementById('content-section');
+// scripts.js
 
-    // Clear existing content
-    contentSection.innerHTML = '';
+function loadSection(section) {
+    var sectionUrl = section + '.html';
 
-    // Load the selected section dynamically
-    switch (sectionName) 
-    {
-        case 'explore':
-            contentSection.innerHTML = '<h2>Explore Books</h2><p>Content for Explore section goes here.</p>';
-            break;
+    fetch(sectionUrl)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('content-section').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading section:', error));
 
-        case 'marketplace':
-            contentSection.innerHTML = '<h2>Book Marketplace</h2><p>Content for Marketplace section goes here.</p>';
-            break;
-
-        case 'create-account':
-            contentSection.innerHTML = '<h2>Create Your Account</h2><p>Content for Create Account section goes here.</p>';
-            break;
-        case 'shelf':
-            contentSection.innerHTML = '<h2>Your Book Shelf</h2><p>Content to add more books here.</p>';
-            break;
-
-        // Add more cases for additional sections
-
-        default:
-            break;
-    }
+        document.getElementById('addBookBtn').addEventListener('click', function() {
+            ////////
+        });
+        
+        document.getElementById('addListingBtn').addEventListener('click', function() {
+            /////////
+        });
+        
 }
