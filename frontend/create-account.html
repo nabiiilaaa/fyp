@@ -8,21 +8,38 @@
 </head>
 <body>
     <header>
-        <h1>Create Your Account</h1>
+        <h1>Your Account</h1>
     </header>
     <section class="account-section">
-        <h2>Account Details</h2>
-        <!-- Account creation form -->
-        <form action="process_registration.php" method="post" id="registration-form" onsubmit="return validateForm()">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+        <h2>Account Options</h2>
+        <!-- tab buttons -->
+        <div class="tab-buttons">
+            <button onclick="showForm('signup')">Sign Up</button>
+            <button onclick="showForm('login')">Log In</button>
+        </div>
+
+         <!-- Signup form -->
+         <form action="process_registration.php" method="post" id="signup-form" onsubmit="return validateSignupForm()" style="display: none;">
+            <label for="signup-email">Email:</label>
+            <input type="email" id="signup-email" name="email" required>
             
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" name="password" required>
+
+            <button type="submit">Create Account</button>
+        </form>
+
+        <!-- Login form -->
+        <form action="process_login.php" method="post" id="login-form" onsubmit="return validateLoginForm()" style="display: none;">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="email" required>
+            
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="password" required>
 
             <p class="forgot-password"><a href="forgot_password.html">Forgot your password?</a></p>
 
-            <button type="submit">Create Account</button>
+            <button type="submit">Log In</button>
         </form>
     </section>
     <script src="scripts.js"></script>
