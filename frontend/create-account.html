@@ -13,7 +13,7 @@
     <section class="account-section">
         <h2>Account Details</h2>
         <!-- Account creation form -->
-        <form action="process_registration.php" method="post">
+        <form action="process_registration.php" method="post" id="registration-form" onsubmit="return validateForm()">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
             

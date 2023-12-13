@@ -2,18 +2,66 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-header, footer {
-    background-color: #a288f3;
-    color: rgb(2, 2, 2);
-    text-align: center;
-    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
 }
 
 section {
     max-width: 800px;
     margin: auto;
     padding: 20px;
+}
+
+
+nav {
+    background-color: #A17A60; /* Set the background color of the list */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    margin-top: 50px; /* Adjust the margin-top to create space between the navbar and the image */
+}
+
+nav ul {
+    background-color: #A17A60; /* Set the background color of the list */
+    display: flex; /* Make the list items display in a row */
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Set the text color of the links */
+    padding: 10px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #A17A60; /* Set the background color of the list */
+}
+body {
+    color: #433831; /* Apply the color to all text elements */
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #433831; /* Apply the color to specific headings */
+}
+p {
+    color: #433831; /* Apply the color to paragraphs */
 }
 
