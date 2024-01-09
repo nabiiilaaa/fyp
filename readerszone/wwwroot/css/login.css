@@ -27,7 +27,7 @@
 	width: 220px;
 	margin: 35px;
 	position: relative;
-	box-shadow: 0 0 20px 9px #2aadff63;
+	box-shadow: 0 0 20px 9px #745E4D63;
 	border-radius: 30px;
 }
 .toggle-btn{
@@ -45,7 +45,7 @@
 	position: absolute;
 	width: 110px;
 	height: 100%;
-	background: #1990d8;
+	background: #A17A60;
 	border-radius: 30px;
 	transition: .5s;
 }
@@ -74,7 +74,7 @@
 	cursor: pointer;
 	display: block;
 	margin: 0 56px;
-	background: #1990d8;
+	background: #A17A60;
 	border: 1;
 	border-color: white;
 	border-radius: 30px;
