@@ -7,6 +7,7 @@
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -147,7 +148,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`Id`, `UserName`, `Email`, `Password`) VALUES
-(1, 'fahad', 'fahadnaeem424@gmail.com', '123');
+(1, 'nabila', 'nabila123@gmail.com', '123');
 
 --
 -- Indexes for dumped tables
