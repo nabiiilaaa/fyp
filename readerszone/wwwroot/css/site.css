@@ -47,6 +47,7 @@
 .book-tile-footer {
     padding: 15px 15px 0px 15px;
     overflow: auto;
+    width: 250px;
 }
 .book-title {
 	margin-bottom: 20px;
