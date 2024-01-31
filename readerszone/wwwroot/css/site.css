@@ -38,12 +38,47 @@
 	border: #E0E0E0 1px solid;
     height: 300px;
 }
+.book-item-detail {
+	float: left;
+	background: #ffffff;
+    height: 70%;
+    width: 73%;
+	margin: 0px 10px 0px 10px;
+	border: #E0E0E0 1px solid;
+}
+.book-detail-table {
+    width: 100%; 
+    margin-bottom: 10px;
+    border-collapse: collapse; 
+}
+.book-detail-table-row {
+    border-bottom: 1pt solid lightgrey;
+}
+.book-detail-heads {
+    font-size: 20;
+    font-weight: bold;
+    font-family: 'calibri';
+    width: 150px;
+    padding-left: 10px;
+    vertical-align: top;
+}
+.book-detail-values {
+    font-size: 18;
+    font-family: 'calibri';
+}
 .book-image {
 	height: 155px;
 	width: 250px;
 	background-color: #FFF;
     object-fit: contain;
     padding-top: 5px;
+}
+.book-image-large {
+    float: left;
+	height: 70%;
+	width: 25%;
+	background-color: #FFF;
+    object-fit: fill;
 }
 .book-tile-footer {
     padding: 15px 15px 0px 15px;
@@ -105,5 +140,4 @@
 	color: #211a1a;
 	border-bottom: 1px solid #E0E0E0;
 	overflow: auto;
-    
 }
