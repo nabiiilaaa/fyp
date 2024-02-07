@@ -46,10 +46,33 @@
                                     <td class="book-detail-heads">Description</td>
                                     <td class="book-detail-values"><?php echo $book_array[$key]["Description"]; ?></td>
                                 </tr>
+                                <tr class="book-detail-table-row">
+                                    <td class="book-detail-heads">
+                                    <?php 
+                                        $rating = $db_handle->userRating($_SESSION['UserId'], $book_array[$key]["Id"], 0);
+                                        echo '<ul class="list-rating list-inline"  onMouseLeave="mouseOutRating(' . $book_array[$key]["Id"] . ',' . $rating . ');"> ';
+                                        for ($count = 1; $count <= 5; $count ++) {
+                                            $starRatingId = $book_array[$key]["Id"] . '_' . $count;
+                                            if($rating == 0) {
+                                                echo '<li value="' . $count . '"  id="' . $starRatingId . '" class="star" onclick="addRating(' . $_SESSION['UserId'] . ',' . $book_array[$key]["Id"] . ',' . $count . ');" onMouseOver="mouseOverRating(' . $book_array[$key]["Id"] . ',' . $count . ');">&#9733;</li>';
+                                            } else if ($count <= $rating) {
+                                                echo '<li value="' . $count . '" id="' . $starRatingId . '" class="star selected">&#9733;</li>';
+                                            } else {
+                                                echo '<li value="' . $count . '"  id="' . $starRatingId . '" class="star">&#9733;</li>';
+                                            }
+                                        }	
+                                        echo '</ul>';
+                                    ?>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                         <input type='button' value='Open Book' class='btnAction' onclick="location.href='book_open.php?Id=<?php echo $book_array[$key]['Id']; ?>';"/>
-						<div class="book-tile-footer">
+						<?php if($rating > 0) {
+                            echo "<input type='button' value='Remove Rating' class='btnAction' onclick='removeRating(".$_SESSION['UserId'].",".$book_array[$key]['Id'].")'/>";
+                        }?>
+                        
+                        <div class="book-tile-footer">
 							
 							<div class="shelf-action">
 								
