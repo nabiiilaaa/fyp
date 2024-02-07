@@ -213,8 +213,9 @@ ALTER TABLE `categories`
 --
 ALTER TABLE `publishers`
   ADD PRIMARY KEY (`Id`);
--- Indexes for table `reviews`
 
+--
+-- Indexes for table `reviews`
 --
 ALTER TABLE `reviews`
   ADD PRIMARY KEY (`Id`);
@@ -260,6 +261,7 @@ ALTER TABLE `categories`
 ALTER TABLE `publishers`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
 
+--
 -- AUTO_INCREMENT for table `reviews`
 --
 ALTER TABLE `reviews`
