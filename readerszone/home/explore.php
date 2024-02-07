@@ -45,6 +45,21 @@ if(!empty($_GET["action"])) {
 						<img class="book-image" src="/ReadersZone/wwwroot/book/images/<?php echo $book_array[$key]["ImageLoc"]; ?>">
 						<div class="book-tile-footer">
 							<div class="book-title"><?php echo $book_array[$key]["Name"]; ?></div>
+							<?php 
+								$rating = $db_handle->avgRating($book_array[$key]["Id"], 0);
+								$totalRating = $db_handle->totalRating($book_array[$key]["Id"]);
+								echo '<ul class="list-rating list-inline"  onMouseLeave="mouseOutRating(' . $book_array[$key]["Id"] . ',' . $rating . ');"> ';
+								for ($count = 1; $count <= 5; $count ++) {
+									$starRatingId = $book_array[$key]["Id"] . '_' . $count;
+									if ($count <= $rating) {
+										echo '<li value="' . $count . '" id="' . $starRatingId . '" class="star selected">&#9733;</li>';
+									} else {
+										echo '<li value="' . $count . '"  id="' . $starRatingId . '" class="star">&#9733;</li>';
+									}
+								}	
+								echo '</ul>';
+								echo '<p class="review-note">Total Reviews: ' . $totalRating . '</p>';
+							?>
 							<div class="shelf-action">
 								<?php
 								if($db_handle->numRows("SELECT * FROM `shelf` WHERE `userId` = '" . $_SESSION['UserId'] . "' AND `bookId` = '" . $book_array[$key]["Id"] . "'") == 0) {
