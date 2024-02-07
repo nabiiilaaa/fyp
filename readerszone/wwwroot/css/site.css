@@ -141,3 +141,28 @@
 	border-bottom: 1px solid #E0E0E0;
 	overflow: auto;
 }
+
+ul.list-rating {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+li.star {
+    list-style: none;
+    display: inline-block;
+    margin-right: 5px;
+    cursor: pointer;
+    color: #9E9E9E;
+}
+
+li.star.selected {
+    color: #ff6e00;
+}
+
+.review-note {
+    font-size: 12px;
+    color: #999;
+    font-style: italic;
+    text-align: center;
+}
