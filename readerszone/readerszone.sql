@@ -126,6 +126,19 @@ INSERT INTO `publishers` (`Id`, `Name`, `Country`) VALUES
 
 -- --------------------------------------------------------
 
+-- Table structure for table `reviews`
+--
+
+CREATE TABLE `reviews` (
+  `Id` int(11) NOT NULL,
+  `userId` int(11) NOT NULL,
+  `bookId` int(11) NOT NULL,
+  `Review` varchar(5000) NOT NULL,
+  `Rating` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
 --
 -- Table structure for table `shelf`
 --
@@ -200,7 +213,11 @@ ALTER TABLE `categories`
 --
 ALTER TABLE `publishers`
   ADD PRIMARY KEY (`Id`);
+-- Indexes for table `reviews`
 
+--
+ALTER TABLE `reviews`
+  ADD PRIMARY KEY (`Id`);
 --
 -- Indexes for table `shelf`
 --
@@ -223,25 +240,30 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `authors`
 --
 ALTER TABLE `authors`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `publishers`
 --
 ALTER TABLE `publishers`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+
+-- AUTO_INCREMENT for table `reviews`
+--
+ALTER TABLE `reviews`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `shelf`
