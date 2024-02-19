@@ -104,6 +104,25 @@ INSERT INTO `categories` (`Id`, `Name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `favcategories`
+--
+
+CREATE TABLE `favcategories` (
+  `Id` int(11) NOT NULL,
+  `userId` int(11) NOT NULL,
+  `categoryId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `favcategories`
+--
+
+INSERT INTO `favcategories` (`Id`, `userId`, `categoryId`) VALUES
+(1, 1, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `publishers`
 --
 
@@ -137,6 +156,18 @@ CREATE TABLE `reviews` (
   `Rating` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- Dumping data for table `reviews`
+--
+
+INSERT INTO `reviews` (`Id`, `userId`, `bookId`, `Review`, `Rating`) VALUES
+(8, 1, 4, '', 4),
+(9, 1, 10, '', 2),
+(10, 2, 4, '', 1),
+(12, 2, 10, '', 5),
+(13, 2, 5, '', 5),
+(14, 2, 2, '', 5),
+(15, 1, 6, '', 5),
+(16, 1, 3, '', 3);
 -- --------------------------------------------------------
 
 --
@@ -208,6 +239,11 @@ ALTER TABLE `books`
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`Id`);
 
+-- Indexes for table `favcategories`
+--
+ALTER TABLE `favcategories`
+  ADD PRIMARY KEY (`Id`);
+
 --
 -- Indexes for table `publishers`
 --
@@ -241,43 +277,47 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `authors`
 --
 ALTER TABLE `authors`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
-
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `favcategories`
+--
+ALTER TABLE `favcategories`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `publishers`
 --
 ALTER TABLE `publishers`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `shelf`
 --
 ALTER TABLE `shelf`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
