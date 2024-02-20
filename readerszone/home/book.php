@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php include($_SERVER['DOCUMENT_ROOT'].'/ReadersZone/include/header.php');?>
-    <div id="book-grid">
+    <div id="book-grid" style="height: 50%; margin-bottom: 0px;">
         
         <?php
             $book_array = $db_handle->runQuery("SELECT books.*, categories.Name as Category, authors.Name as Author, publishers.Name as Publisher, publishers.Country as Country 
@@ -131,7 +131,7 @@
             }
         }?>
     </div>
-    
+
     <?php include($_SERVER['DOCUMENT_ROOT'].'/ReadersZone/include/includeJS.php');?>
 </body>
 </html>
