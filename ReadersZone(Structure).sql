@@ -89,4 +89,146 @@ CREATE TABLE `favcategories` (
   `categoryId` int(11) NOT NULL
 );
 
+--
+-- Indexes for table `authors`
+--
+ALTER TABLE `authors`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `books`
+--
+ALTER TABLE `books`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `chat_message`
+--
+ALTER TABLE `chat_message`
+  ADD PRIMARY KEY (`chat_message_id`);
+
+--
+-- Indexes for table `favcategories`
+--
+ALTER TABLE `favcategories`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `login_details`
+--
+ALTER TABLE `login_details`
+  ADD PRIMARY KEY (`login_details_id`);
+
+--
+-- Indexes for table `market`
+--
+ALTER TABLE `market`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `publishers`
+--
+ALTER TABLE `publishers`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `reviews`
+--
+ALTER TABLE `reviews`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `shelf`
+--
+ALTER TABLE `shelf`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `authors`
+--
+ALTER TABLE `authors`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=583;
+
+--
+-- AUTO_INCREMENT for table `books`
+--
+ALTER TABLE `books`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11128;
+
+--
+-- AUTO_INCREMENT for table `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `chat_message`
+--
+ALTER TABLE `chat_message`
+  MODIFY `chat_message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `favcategories`
+--
+ALTER TABLE `favcategories`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+
+--
+-- AUTO_INCREMENT for table `login_details`
+--
+ALTER TABLE `login_details`
+  MODIFY `login_details_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+
+--
+-- AUTO_INCREMENT for table `market`
+--
+ALTER TABLE `market`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT for table `publishers`
+--
+ALTER TABLE `publishers`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=614;
+
+--
+-- AUTO_INCREMENT for table `reviews`
+--
+ALTER TABLE `reviews`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=182;
+
+--
+-- AUTO_INCREMENT for table `shelf`
+--
+ALTER TABLE `shelf`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
 COMMIT;
